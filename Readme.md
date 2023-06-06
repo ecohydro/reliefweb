@@ -22,3 +22,11 @@ To run the shell script, run the following command:
 
 `./get_all_disasters.sh`    
 
+The script will take a long time to run, so in order to run it in the background, run the following command:
+
+`nohup ./get_all_disasters.sh &`
+
+If you want the progress of the script (the output of the CURL commands) to be saved to a file, run the following command:
+
+`nohup ./get_all_disasters.sh > output.txt &`
+
