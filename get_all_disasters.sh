@@ -1,4 +1,8 @@
 #!/bin/bash
+# This code will fetch all disasters from the ReliefWeb API
+# and save them to a JSON file called all_data.json
+
+
 
 # Initialize offset
 OFFSET=0
@@ -17,7 +21,17 @@ while [ $OFFSET -lt 300588 ]; do
             "include": [
                 "source.shortname",
                 "date",
-                "disaster.id"
+                "disaster.id",
+                "disaster.name",
+                "disaster.type.name",
+                "country",
+                "primary_country.iso3",
+                "primary_country.id",
+                "primary_type.name",
+                "disaster_type.id",
+                "file.url",
+                "theme.name",
+                "theme.id",
             ]
         },
         "filter": {
